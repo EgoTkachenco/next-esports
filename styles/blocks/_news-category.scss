@@ -1,0 +1,125 @@
+.news-article {
+  position: relative;
+  width: calc((100% - 8.25rem) / 2);
+  margin-bottom: 2rem;
+
+  &:nth-child(even) {
+    margin: 0 1.5rem 2rem 6rem;
+  }
+
+  @media (max-width: $sm) {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1rem;
+
+    &:nth-child(even) {
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+
+    .news-article-content {
+      width: calc(100% - 8rem);
+      padding-left: 1rem;
+    }
+  }
+
+  .news-article-top {
+    position: relative;
+    height: 10.5rem;
+
+    &__label {
+      position: absolute;
+      background: $c-black;
+      color: $c-white;
+      font-size: 0.875rem;
+      padding: 0.5rem 0.625rem;
+      bottom: 0;
+      left: 0;
+    }
+
+    @media (max-width: $sm) {
+      width: 8rem;
+
+      &__label {
+        font-size: 0.625rem;
+        line-height: 0.75rem;
+        padding: 0.25rem;
+      }
+    }
+  }
+
+  .news-article__title {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-family: 'Roboto', sans-serif;
+    color: $c-white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: $sm) {
+      margin-top: 0;
+      font-size: 0.75rem;
+      line-height: 0.875rem;
+    }
+  }
+  .news-article-bottom {
+    display: flex;
+    font-size: 0.875rem;
+    margin-top: 0.625rem;
+    @media (max-width: $sm) {
+      margin-top: 0.75rem;
+    }
+
+    .news-article__author {
+      color: #b9b9b9;
+      font-weight: 500;
+
+      @media (max-width: $sm) {
+        display: none;
+      }
+    }
+    .news-article__date {
+      color: dimgrey;
+      font-weight: 400;
+      margin-left: 1rem;
+
+      @media (max-width: $sm) {
+        font-size: 0.625rem;
+        line-height: 0.75rem;
+        margin-left: 0;
+      }
+    }
+    .news-article__comments {
+      margin-left: auto;
+      position: relative;
+      width: 1rem;
+      height: 1rem;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+      span {
+        font-weight: 400;
+        font-size: 0.5625rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-40%);
+        color: $c-white;
+
+        @media (max-width: $sm) {
+          font-size: 0.5rem;
+          line-height: 0.75rem;
+        }
+      }
+    }
+  }
+}

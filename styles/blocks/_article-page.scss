@@ -1,0 +1,189 @@
+.article-page {
+  width: 52.5rem;
+  padding-bottom: 13.75rem;
+  @media (max-width: $sm) {
+    width: 100%;
+    padding: 0 1.4rem;
+  }
+  .article__back {
+    position: absolute;
+    height: 37.5rem;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  .article__back-mob {
+    display: none;
+  }
+  .article {
+    margin-top: 2rem;
+    position: relative;
+    color: $c-white;
+
+    @media (max-width: $sm) {
+      margin-top: 3rem;
+    }
+
+    &__title {
+      font-size: 3rem;
+      line-height: 3.5rem;
+      margin-bottom: 1rem;
+      font-family: $f-secondary;
+      @media (max-width: $sm) {
+        font-size: 2rem;
+        line-height: 2.375rem;
+      }
+    }
+
+    &-info {
+      display: flex;
+      align-items: center;
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+      margin-bottom: 1.75rem;
+
+      @media (max-width: $sm) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      &__reading-time {
+        color: #b9b9b9;
+        margin-left: 1.5rem;
+
+        @media (max-width: $sm) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__illustration {
+      margin-bottom: 3rem;
+      @media (max-width: $sm) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &-social {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      @media (max-width: $sm) {
+        position: static;
+        display: flex;
+        margin-bottom: 1.5rem;
+      }
+
+      &__link {
+        width: 3rem;
+        height: 3rem;
+        background: #bb4300;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        svg {
+          transition: all 0.3s;
+        }
+        &:hover {
+          svg {
+            transform: scale(1.1);
+          }
+        }
+
+        @media (max-width: $sm) {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+
+    &-content {
+      position: relative;
+      padding-left: 6.75rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+
+      @media (max-width: $sm) {
+        padding-left: 0;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+      }
+
+      svg {
+        width: 1.5rem;
+      }
+
+      a {
+        font-weight: 700;
+        color: $c-blue;
+        text-decoration: none;
+      }
+    }
+
+    &-author {
+      border-top: 1px solid #3c3d41;
+      border-bottom: 1px solid #3c3d41;
+      display: flex;
+      padding: 2rem 0;
+      &__avatar {
+        min-width: 6rem;
+        width: 6rem;
+        height: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+
+        @media (max-width: $sm) {
+          min-width: 4rem;
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+
+      &-content {
+        padding-left: 1.875rem;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+
+        @media (max-width: $sm) {
+          padding-left: 1.5rem;
+          font-size: 0.75rem;
+        }
+      }
+
+      &__title {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: $c-blue;
+
+        @media (max-width: $sm) {
+          font-size: 1rem;
+        }
+      }
+
+      &-links {
+        margin-top: 1.25rem;
+        display: flex;
+        a {
+          margin-right: 1.5rem;
+
+          svg {
+            width: 3rem;
+            @media (max-width: $sm) {
+              width: 1.5rem;
+            }
+            path {
+              fill: #3c3d41;
+            }
+          }
+        }
+      }
+    }
+  }
+}

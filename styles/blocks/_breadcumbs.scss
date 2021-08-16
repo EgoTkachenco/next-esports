@@ -1,0 +1,35 @@
+.breadcrumbs {
+  margin: 1.5rem 0 2.5rem;
+  border-top: 0.0625rem solid #3c6801;
+  font-family: Roboto;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  color: $c-grey;
+  position: relative;
+  font-size: 0.875rem;
+  background: $c-dark;
+  &__item {
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      color: $c-white;
+    }
+  }
+  &__triangle {
+    width: 0.25rem;
+    height: 0.375rem;
+    margin: 1.5rem;
+  }
+
+  @media (max-width: $sm) {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    margin: 1rem 0 1.5rem;
+
+    &__triangle {
+      margin: 0.5rem;
+    }
+  }
+}

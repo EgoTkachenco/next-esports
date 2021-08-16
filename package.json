@@ -4,14 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "imagemin-mozjpeg": "^9.0.0",
     "next": "11.1.0",
+    "next-optimized-images": "^2.6.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "responsive-loader": "^2.3.0",
+    "sass": "^1.37.5",
+    "sharp": "^0.28.3"
   },
   "devDependencies": {
     "eslint": "7.32.0",

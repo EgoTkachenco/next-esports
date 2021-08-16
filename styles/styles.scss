@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+// COLORS
+$c-primary: #8cc63f;
+$c-white: #ffffff;
+$c-black: #000000;
+$c-dark: #1b1d21;
+$c-blue: #3ea2ff;
+$c-grey: #85879e;
+// FONTS
+$f-primary: 'Roboto', sans-serif;
+$f-secondary: 'Bebas Neue', sans-serif;
+
+$content-width: 80rem;
+
+// SCREEN SIZES
+$xl: 1920px;
+$lg: 1360px;
+$md: 900px;
+$sm: 600px;
+
+html {
+  // 1920px -> 1rem -> 16px;
+  font-size: 0.833vw;
+
+  @media (min-width: $xl) {
+    font-size: 16px;
+  }
+  @media (max-width: $md) {
+    font-size: 1vw;
+  }
+  @media (max-width: $sm) {
+    font-size: 5vw;
+  }
+}
+body {
+  font-family: $f-primary;
+  margin: 0;
+  background: $c-dark;
+}
+* {
+  box-sizing: border-box;
+}
+// img {
+//   max-width: 100% !important;
+// }
+a {
+  color: $c-white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.btn {
+  background: none;
+  border: none;
+  font-family: $f-secondary;
+  height: 3rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  width: 9.125rem;
+  text-align: center;
+
+  @media (max-width: $sm) {
+    height: 2rem;
+    width: 6.875rem;
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+}
+
+.btn-primary {
+  background: $c-primary;
+  color: $c-white;
+  border: 0.075rem solid $c-primary;
+}
+.btn-outlined {
+  border: 0.075rem solid $c-primary;
+  color: $c-primary;
+  &:hover {
+    background: $c-primary;
+    color: $c-white;
+  }
+}
+
+@import './blocks/header';
+@import './blocks/breadcumbs';
+@import './blocks/home';
+@import './blocks/news-category';
+@import './blocks/games-category';
+@import './blocks/_article-page';
+@import './blocks/_category-page';
+@import './blocks/footer';
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 10rem);
+}
