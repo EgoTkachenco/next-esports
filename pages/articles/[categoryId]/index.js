@@ -67,17 +67,17 @@ const Article = ({ article, category }) => {
   )
 }
 
-CategoryPage.getInitialProps = async (ctx) => {
-  const { categoryId } = ctx.query
+export async function getStaticProps({ params: { categoryId } }) {
   const articles = DATA.articles.filter(
     (article) => article.categoryId === categoryId
   )
   const category = DATA.categories.find(
     (category) => category.id === categoryId
   )
-  return { articles, category }
+  return { props: { articles, category } }
 }
-CategoryPage.getStaticPath = async (ctx) => {
+
+export async function getStaticPaths() {
   const params = DATA.categories.map((category) => ({
     params: { categoryId: category.id },
   }))
@@ -86,5 +86,6 @@ CategoryPage.getStaticPath = async (ctx) => {
     fallback: false, // See the "fallback" section below
   }
 }
+
 
 export default CategoryPage

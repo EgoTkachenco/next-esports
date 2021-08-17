@@ -118,15 +118,14 @@ const SocialLinks = () => {
   )
 }
 
-ArticlePage.getInitialProps = async (ctx) => {
-  const { categoryId, articleId } = ctx.query
+export async function getStaticProps({ params: { categoryId, articleId } }) {
   const article = DATA.articles.find(
     (article) => article.categoryId === categoryId && article.id === articleId
   )
-  return { article }
+  return { props: {article} }
 }
 
-ArticlePage.getStaticPath = async (ctx) => {
+export async function getStaticPaths() {
   const params = DATA.articles.map((article) => ({
     params: { categoryId: article.categoryId, articleId: article.id },
   }))
