@@ -1,6 +1,4 @@
 import React from 'react'
-import GamesImg from '../public/images/games/games.png'
-import GamesImgMob from '../public/images/games/games_mob.png'
 import Image from 'next/image'
 import Link from 'next/link'
 const Games = () => {
@@ -46,10 +44,10 @@ const Games = () => {
     <div className="category-block games-block">
       <div>
         <div className="category-block__label">
-          <Image src={GamesImg} layout="fill" objectFit="fill" alt="GAMES" />
+          <Image src="/images/games/games.png" layout="fill" objectFit="fill" alt="GAMES" />
         </div>
         <div className="category-block__label-mob">
-          <Image src={GamesImgMob} layout="fill" objectFit="fill" alt="GAMES" />
+          <Image src="/images/games/games_mob.png" layout="fill" objectFit="fill" alt="GAMES" />
         </div>
       </div>
       {games.map((game, i) => (
