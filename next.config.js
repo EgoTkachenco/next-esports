@@ -6,7 +6,7 @@ module.exports = {
   assetPrefix: '/next-esports/',
   images: {
     loader: "imgix",
-    path: process.env.NODE_ENV === 'production' ? 'https://egotkachenco.github.io/next-esports/out/' : 'http://localhost:3000/',
+    path: process.env.NODE_ENV === 'production' ? 'https://egotkachenco.github.io/next-esports/' : 'http://localhost:3000/',
   },
   
   env: {
