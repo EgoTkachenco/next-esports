@@ -122,7 +122,7 @@ export async function getStaticProps({ params: { categoryId, articleId } }) {
   const article = DATA.articles.find(
     (article) => article.categoryId === categoryId && article.id === articleId
   )
-  return { props: {article} }
+  return { props: { article } }
 }
 
 export async function getStaticPaths() {

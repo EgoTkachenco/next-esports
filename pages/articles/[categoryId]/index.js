@@ -15,7 +15,15 @@ function CategoryPage({ articles, category }) {
               src={category.image}
               layout="responsive"
               width="1920"
-              height="400"
+              height="340"
+              alt="back"
+            />
+          </div>
+          <div className="category__back-mob">
+            <Image
+              src={category.image}
+              layout="fill"
+              objectFit="fill"
               alt="back"
             />
           </div>
@@ -86,6 +94,5 @@ export async function getStaticPaths() {
     fallback: false, // See the "fallback" section below
   }
 }
-
 
 export default CategoryPage

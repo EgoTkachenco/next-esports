@@ -11,6 +11,9 @@
     width: 100%;
     left: 0;
     top: 0;
+    @media (max-width: $sm) {
+      height: 12.5rem;
+    }
   }
   .article__back-mob {
     display: none;

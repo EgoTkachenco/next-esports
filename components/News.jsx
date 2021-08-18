@@ -76,7 +76,7 @@ const NewsArticle = ({ article }) => {
           <div className="news-article__author">{article.author}</div>
           <div className="news-article__date">{article.date}</div>
 
-          <div className="news-article__comments">
+          {/* <div className="news-article__comments">
             <svg
               width="16"
               height="16"
@@ -87,7 +87,7 @@ const NewsArticle = ({ article }) => {
               <path d="M0 0H16V12H4L0 16V0Z" fill="#4C4F7A" />
             </svg>
             <span>0</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
