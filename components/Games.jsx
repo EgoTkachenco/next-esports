@@ -35,7 +35,7 @@ const Games = () => {
     },
     {
       title: 'Valorant',
-      image: '/images/games/Valorant.png',
+      image: '/images/games/valorant.png',
       color: 'platinum',
       url: 'valorant',
     },
@@ -44,10 +44,20 @@ const Games = () => {
     <div className="category-block games-block">
       <div>
         <div className="category-block__label">
-          <Image src="/images/games/games.png" layout="fill" objectFit="fill" alt="GAMES" />
+          <Image
+            src="/images/games/games.png"
+            layout="fill"
+            objectFit="fill"
+            alt="GAMES"
+          />
         </div>
         <div className="category-block__label-mob">
-          <Image src="/images/games/games_mob.png" layout="fill" objectFit="fill" alt="GAMES" />
+          <Image
+            src="/images/games/games_mob.png"
+            layout="fill"
+            objectFit="fill"
+            alt="GAMES"
+          />
         </div>
       </div>
       {games.map((game, i) => (
