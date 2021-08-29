@@ -2,10 +2,73 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Icon from '../../../components/common/Icon'
 import DATA from '../../../public/articles.json'
+import { useRouter } from 'next/router'
 function ArticlePage({ article }) {
+  const router = useRouter()
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>{article?.title}</title>
+        <meta
+          name="description"
+          content={article?.content?.slice(0, 250) + '...'}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'NewsArticle',
+              mainEntityOfPage: {
+                '@type': 'WebPage',
+                '@id': `https://outrun.gg${router.asPath}`,
+              },
+              headline:
+                'QYOU Partners With Capcom for Resident Evil Village TikTok Channel',
+              image: 'https://outrun.gg' + article?.image,
+              author: {
+                '@type': 'Organization',
+                name: 'outrun.gg',
+              },
+              publisher: {
+                '@type': 'Organization',
+                name: '',
+                logo: {
+                  '@type': 'ImageObject',
+                  url: 'https://outrun.gg/icons/Logo.svg',
+                },
+              },
+              datePublished: '2021-07-11',
+            }),
+          }}
+        ></script>
+        <meta property="og:title" content={article?.title} />
+        <meta property="og:site_name" content="outrun.gg" />
+        <meta property="og:url" content={`https://outrun.gg${router.asPath}`} />
+        <meta
+          property="og:description"
+          content={article?.content?.slice(0, 250) + '...'}
+        />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:image"
+          content={'https://outrun.gg' + article?.image}
+        />
+
+        <meta name="twitter:card" content="app" />
+        <meta name="twitter:site" content="@" />
+        <meta
+          name="twitter:description"
+          content={article?.content?.slice(0, 250) + '...'}
+        />
+        <meta name="twitter:app:name:iphone" content="" />
+        <meta name="twitter:app:id:iphone" content="" />
+        <meta name="twitter:app:name:ipad" content="" />
+        <meta name="twitter:app:id:ipad" content="" />
+        <meta name="twitter:app:name:googleplay" content="" />
+        <meta name="twitter:app:id:googleplay" content="" />
+        <meta name="twitter:app:country" content="" />
+      </Head>
       <div className="content">
         <div className="article-page">
           <div className="article__back">
@@ -26,7 +89,7 @@ function ArticlePage({ article }) {
           </div>
 
           <div className="article">
-            <div className="article__title">{article.title}</div>
+            <h1 className="article__title">{article.title}</h1>
             <div className="article-info">
               <div className="article-info__date">
                 by {article.author} - {article.date}

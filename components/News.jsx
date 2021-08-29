@@ -68,7 +68,7 @@ const NewsArticle = ({ article }) => {
       </div>
       <div className="news-article-content">
         <div className="news-article__title">
-          <Link href={`/articles/${article.categoryId}/${article.id}`}>
+          <Link href={`/articles/${article.categoryId}/${article.id}`} passHref>
             {article.title}
           </Link>
         </div>

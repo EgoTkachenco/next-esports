@@ -7,7 +7,10 @@ function CategoryPage({ articles, category }) {
   if (!category) return <div className="content"></div>
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>Outrun.gg</title>
+        <meta name="description" content="Esports. News you need" />
+      </Head>
       <div className="content">
         <div className="category-page">
           <div className="category__back">
@@ -28,7 +31,7 @@ function CategoryPage({ articles, category }) {
             />
           </div>
           <BreadCrumbs />
-          <div className="category-page__title">{category.title}</div>
+          <h1 className="category-page__title">{category.title}</h1>
           <div className="category-page__articles">
             {articles.map((article, i) => (
               <Article key={i} article={article} category={category.id} />
