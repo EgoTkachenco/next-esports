@@ -1,41 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import NewsImg from '../public/images/news/news.png'
+import NewsImg from '../public/images/news/news_new.png'
 import NewsImgMob from '../public/images/news/news_mob.png'
 const News = ({ news }) => {
-  // const articles = [
-  //   {
-  //     title: 'HyperX named peripherals partner for Red Bull Racing Esports',
-  //     image: News1,
-  //     author: 'Jonno Nicholson',
-  //     date: 'April 27, 2021',
-  //     label: 'Partnership & Sponsorship',
-  //   },
-  //   {
-  //     title: 'FaZe Clan signs NFL quarteback Kyler Murray',
-  //     image: News2,
-  //     author: 'Jonno Nicholson',
-  //     date: 'April 27, 2021',
-  //     label: 'North America',
-  //   },
-  //   {
-  //     title:
-  //       'Elsa Esports partners with Relog Media, Funspark and GRID to create...',
-  //     image: News3,
-  //     author: 'Jonno Nicholson',
-  //     date: 'April 27, 2021',
-  //     label: 'CS:GO',
-  //   },
-  //   {
-  //     title:
-  //       'Semper Fortis Esports raises $2.55 M from Aquis Stock Exchange listing',
-  //     image: News4,
-  //     author: 'Jonno Nicholson',
-  //     date: 'April 27, 2021',
-  //     label: 'Investmans, M&A',
-  //   },
-  // ]
   return (
     <div className="category-block">
       <div style={{ width: '100%' }}>

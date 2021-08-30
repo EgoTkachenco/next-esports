@@ -2,7 +2,7 @@
   "articles": [
     {
       "title": "Renewal Has Earned a Spot in IEM Fall After a Perfect Performance at DreamHack Open June",
-      "image": "/images/news/news1.png",
+      "image": "/images/csgo/csgo1.png",
       "id": "news-1",
       "categoryId": "news",
       "date": "May 8, 2021",
@@ -11,7 +11,7 @@
     },
     {
       "title": "Mixwell from G2 Overshadowed Everyone at VCT EU Closed Qualifier",
-      "image": "/images/news/news2.png",
+      "image": "/images/csgo/csgo2.png",
       "id": "news-2",
       "categoryId": "news",
       "date": "May 8, 2021",
@@ -20,7 +20,7 @@
     },
     {
       "title": "An Agreement Between Astralis Group and POWER is Being Announced",
-      "image": "/images/news/news3.png",
+      "image": "/images/csgo/csgo3.png",
       "id": "news-3",
       "categoryId": "news",
       "date": "May 8, 2021",
@@ -29,7 +29,7 @@
     },
     {
       "title": "Cloud9 Overpowers Team Liquid, Solidifying Their Third Place in 2021 LCS Summer Split Week 5",
-      "image": "/images/news/news4.png",
+      "image": "/images/dota/dota1.png",
       "id": "news-4",
       "categoryId": "news",
       "date": "May 8, 2021",
@@ -38,7 +38,7 @@
     },
     {
       "title": "FaZe Clan Parted Ways with Kay After a Supposed Machination with Crypto",
-      "image": "/images/news/news1.png",
+      "image": "/images/dota/dota2.png",
       "id": "news-5",
       "categoryId": "news",
       "date": "May 8, 2021",
@@ -75,7 +75,7 @@
     },
     {
       "title": "Cloud9 Overpowers Team Liquid, Solidifying Their Third Place in 2021 LCS Summer Split Week 5",
-      "image": "/images/csgo/csgo4.png",
+      "image": "/images/dota/dota1.png",
       "id": "csgo-4",
       "categoryId": "cs-go",
       "date": "May 8, 2021",
@@ -84,7 +84,7 @@
     },
     {
       "title": "FaZe Clan Parted Ways with Kay After a Supposed Machination with Crypto",
-      "image": "/images/csgo/csgo5.png",
+      "image": "/images/dota/dota2.png",
       "id": "csgo-5",
       "categoryId": "cs-go",
       "date": "May 8, 2021",
@@ -94,7 +94,7 @@
 
     {
       "title": "Renewal Has Earned a Spot in IEM Fall After a Perfect Performance at DreamHack Open June",
-      "image": "/images/dota/dota1.png",
+      "image": "/images/csgo/csgo1.png",
       "id": "dota-1",
       "categoryId": "dota-2",
       "date": "May 8, 2021",
@@ -103,7 +103,7 @@
     },
     {
       "title": "Mixwell from G2 Overshadowed Everyone at VCT EU Closed Qualifier",
-      "image": "/images/dota/dota2.png",
+      "image": "/images/csgo/csgo2.png",
       "id": "dota-2",
       "categoryId": "dota-2",
       "date": "May 8, 2021",
@@ -112,7 +112,7 @@
     },
     {
       "title": "An Agreement Between Astralis Group and POWER is Being Announced",
-      "image": "/images/dota/dota3.png",
+      "image": "/images/csgo/csgo3.png",
       "id": "dota-3",
       "categoryId": "dota-2",
       "date": "May 8, 2021",
@@ -121,7 +121,7 @@
     },
     {
       "title": "Cloud9 Overpowers Team Liquid, Solidifying Their Third Place in 2021 LCS Summer Split Week 5",
-      "image": "/images/dota/dota4.png",
+      "image": "/images/dota/dota1.png",
       "id": "dota-4",
       "categoryId": "dota-2",
       "date": "May 8, 2021",
@@ -130,7 +130,7 @@
     },
     {
       "title": "FaZe Clan Parted Ways with Kay After a Supposed Machination with Crypto",
-      "image": "/images/dota/dota5.png",
+      "image": "/images/dota/dota2.png",
       "id": "dota-5",
       "categoryId": "dota-2",
       "date": "May 8, 2021",

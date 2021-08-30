@@ -8,8 +8,13 @@ function Home({ news }) {
   return (
     <>
       <Head>
-        <title>Outrun.gg</title>
-        <meta name="description" content="Esports. News you need" />
+        <title>
+          Outrun.gg: All About eSports Games, News, Events, Teams, Community
+        </title>
+        <meta
+          name="description"
+          content="Are you a eSports fan? You're at the right place - find out more about current community news, teams, tournaments and even more eSports-related things on the Outrun.gg website"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

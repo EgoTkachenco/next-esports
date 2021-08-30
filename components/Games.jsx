@@ -45,7 +45,7 @@ const Games = () => {
       <div>
         <div className="category-block__label">
           <Image
-            src="/images/games/games.png"
+            src="/images/games/games_new.png"
             layout="fill"
             objectFit="fill"
             alt="GAMES"
