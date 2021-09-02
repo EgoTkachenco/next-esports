@@ -3,7 +3,7 @@
     {
       "title": "Renewal Has Earned a Spot in IEM Fall After a Perfect Performance at DreamHack Open June",
       "image": "/images/csgo/csgo1.png",
-      "id": "news-1",
+      "id": "renewal-has-earned-a-spot-in-iem-fall-after-a-perfect-performance-at-dreamhack-open-june",
       "categoryId": "news",
       "date": "May 8, 2021",
       "author": "James Fudge",
@@ -12,7 +12,7 @@
     {
       "title": "Mixwell from G2 Overshadowed Everyone at VCT EU Closed Qualifier",
       "image": "/images/csgo/csgo2.png",
-      "id": "news-2",
+      "id": "mixwell-from-g2-overshadowed-everyone-at-vct-eu-closed-qualifier",
       "categoryId": "news",
       "date": "May 8, 2021",
       "author": "James Fudge",
@@ -21,7 +21,7 @@
     {
       "title": "An Agreement Between Astralis Group and POWER is Being Announced",
       "image": "/images/csgo/csgo3.png",
-      "id": "news-3",
+      "id": "an-agreement-between-astralis-group-and-power-is-being-announced",
       "categoryId": "news",
       "date": "May 8, 2021",
       "author": "James Fudge",
@@ -30,7 +30,7 @@
     {
       "title": "Cloud9 Overpowers Team Liquid, Solidifying Their Third Place in 2021 LCS Summer Split Week 5",
       "image": "/images/dota/dota1.png",
-      "id": "news-4",
+      "id": "cloud9-overpowers-team-liquid,-solidifying-their-third-place-in-2021-lcs-summer-split-week-5",
       "categoryId": "news",
       "date": "May 8, 2021",
       "author": "James Fudge",
@@ -39,7 +39,7 @@
     {
       "title": "FaZe Clan Parted Ways with Kay After a Supposed Machination with Crypto",
       "image": "/images/dota/dota2.png",
-      "id": "news-5",
+      "id": "faze-clan-parted-ways-with-kay-after-a-supposed-machination-with-crypto",
       "categoryId": "news",
       "date": "May 8, 2021",
       "author": "James Fudge",
@@ -49,7 +49,7 @@
     {
       "title": "Renewal Has Earned a Spot in IEM Fall After a Perfect Performance at DreamHack Open June",
       "image": "/images/csgo/csgo1.png",
-      "id": "csgo-1",
+      "id": "renewal-has-earned-a-spot-in-iem-fall-after-a-perfect-performance-at-dreamhack-open-june",
       "categoryId": "cs-go",
       "date": "May 8, 2021",
       "author": "James Fudge",
@@ -58,7 +58,7 @@
     {
       "title": "Mixwell from G2 Overshadowed Everyone at VCT EU Closed Qualifier",
       "image": "/images/csgo/csgo2.png",
-      "id": "csgo-2",
+      "id": "mixwell-from-g2-overshadowed-everyone-at-vct-eu-closed-qualifier",
       "categoryId": "cs-go",
       "date": "May 8, 2021",
       "author": "James Fudge",
@@ -67,7 +67,7 @@
     {
       "title": "An Agreement Between Astralis Group and POWER is Being Announced",
       "image": "/images/csgo/csgo3.png",
-      "id": "csgo-3",
+      "id": "an-agreement-between-astralis-group-and-power-is-being-announced",
       "categoryId": "cs-go",
       "date": "May 8, 2021",
       "author": "James Fudge",
@@ -76,7 +76,7 @@
     {
       "title": "Cloud9 Overpowers Team Liquid, Solidifying Their Third Place in 2021 LCS Summer Split Week 5",
       "image": "/images/dota/dota1.png",
-      "id": "csgo-4",
+      "id": "cloud9-overpowers-team-liquid,-solidifying-their-third-place-in-2021-lcs-summer-split-week-5",
       "categoryId": "cs-go",
       "date": "May 8, 2021",
       "author": "James Fudge",
@@ -85,7 +85,7 @@
     {
       "title": "FaZe Clan Parted Ways with Kay After a Supposed Machination with Crypto",
       "image": "/images/dota/dota2.png",
-      "id": "csgo-5",
+      "id": "faze-clan-parted-ways-with-kay-after-a-supposed-machination-with-crypto",
       "categoryId": "cs-go",
       "date": "May 8, 2021",
       "author": "James Fudge",
@@ -95,7 +95,7 @@
     {
       "title": "Renewal Has Earned a Spot in IEM Fall After a Perfect Performance at DreamHack Open June",
       "image": "/images/csgo/csgo1.png",
-      "id": "dota-1",
+      "id": "renewal-has-earned-a-spot-in-iem-fall-after-a-perfect-performance-at-dreamhack-open-june",
       "categoryId": "dota-2",
       "date": "May 8, 2021",
       "author": "James Fudge",
@@ -104,7 +104,7 @@
     {
       "title": "Mixwell from G2 Overshadowed Everyone at VCT EU Closed Qualifier",
       "image": "/images/csgo/csgo2.png",
-      "id": "dota-2",
+      "id": "mixwell-from-g2-overshadowed-everyone-at-vct-eu-closed-qualifier",
       "categoryId": "dota-2",
       "date": "May 8, 2021",
       "author": "James Fudge",
@@ -113,7 +113,7 @@
     {
       "title": "An Agreement Between Astralis Group and POWER is Being Announced",
       "image": "/images/csgo/csgo3.png",
-      "id": "dota-3",
+      "id": "an-agreement-between-astralis-group-and-power-is-being-announced",
       "categoryId": "dota-2",
       "date": "May 8, 2021",
       "author": "James Fudge",
@@ -122,7 +122,7 @@
     {
       "title": "Cloud9 Overpowers Team Liquid, Solidifying Their Third Place in 2021 LCS Summer Split Week 5",
       "image": "/images/dota/dota1.png",
-      "id": "dota-4",
+      "id": "cloud9-overpowers-team-liquid,-solidifying-their-third-place-in-2021-lcs-summer-split-week-5",
       "categoryId": "dota-2",
       "date": "May 8, 2021",
       "author": "James Fudge",
@@ -131,7 +131,7 @@
     {
       "title": "FaZe Clan Parted Ways with Kay After a Supposed Machination with Crypto",
       "image": "/images/dota/dota2.png",
-      "id": "dota-5",
+      "id": "faze-clan-parted-ways-with-kay-after-a-supposed-machination-with-crypto",
       "categoryId": "dota-2",
       "date": "May 8, 2021",
       "author": "James Fudge",

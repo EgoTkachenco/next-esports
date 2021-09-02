@@ -37,6 +37,9 @@ function Home({ news }) {
           quality="100"
         />
       </div>
+      <h1 style={{ opacity: 0, position: 'absolute' }}>
+        Dive Into the eSports Industry With Outrun.gg!
+      </h1>
       <div className="content">
         <div className="home-page">
           <BreadCrumbs />

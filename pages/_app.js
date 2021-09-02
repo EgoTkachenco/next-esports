@@ -2,8 +2,10 @@ import '../styles/styles.scss'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter()
   return (
     <>
       <Head>
@@ -28,6 +30,9 @@ function MyApp({ Component, pageProps }) {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`https://outrun.gg${router.asPath}`} />
+        <meta name="author" content="outrun.gg" />
       </Head>
       <Header />
       <Component {...pageProps} />

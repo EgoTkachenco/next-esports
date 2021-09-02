@@ -76,7 +76,7 @@ export default Games
 
 const GamesItems = ({ title, image, color, url }) => {
   return (
-    <Link href={`/articles/${url}`} passHref>
+    <Link href={`/${url}`} passHref>
       <div className={`games-items ${color}`}>
         <Image src={image} layout="fill" objectFit="contain" alt={title} />
         <div className="games-items__title">{title}</div>
