@@ -60,7 +60,7 @@ const Article = ({ article, category }) => {
         <div className="category-page-article-bottom">
           <div className="category-page-article__author">{article.author}</div>
           <div className="category-page-article__date">{article.date}</div>
-          <Link href={`/articles/${category}/${article.id}`} passHref>
+          <Link href={`/${category}/${article.id}`} passHref>
             <div className="category-page-article__more">
               Read more
               <svg
