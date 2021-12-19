@@ -3,10 +3,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import NewsImg from '../public/images/news/news_new.png'
 import NewsImgMob from '../public/images/news/news_mob.png'
+import { formatDate } from '../lib/date'
 const News = ({ news }) => {
   return (
     <div className="category-block">
-      <div style={{ width: '100%' }}>
+      <div className="category-block__label-wrapper">
         <div className="category-block__label">
           <Image src={NewsImg} alt="NEWS" layout="fill" objectFit="fill" />
         </div>
@@ -14,8 +15,8 @@ const News = ({ news }) => {
           <Image src={NewsImgMob} alt="NEWS" layout="fill" objectFit="fill" />
         </div>
       </div>
-      {news.map((article, i) => (
-        <NewsArticle key={i} article={article} />
+      {news.map((article) => (
+        <NewsArticle key={article.id} article={article} />
       ))}
     </div>
   )
@@ -26,23 +27,26 @@ const NewsArticle = ({ article }) => {
   return (
     <div className="news-article">
       <div className="news-article-top">
-        <Image
-          src={article.image}
+        <img
+          className="preview"
+          src={
+            process.env.NEXT_PUBLIC_SERVER_URL + article.image.formats.small.url
+          }
           alt={article.title}
-          layout="fill"
-          objectFit="fill"
         />
         {/* <div className="news-article-top__label">{label}</div> */}
       </div>
       <div className="news-article-content">
         <div className="news-article__title">
-          <Link href={`/${article.categoryId}/${article.id}`} passHref>
+          <Link href={`/${article.category.url}/${article.url}`} passHref>
             {article.title}
           </Link>
         </div>
         <div className="news-article-bottom">
           <div className="news-article__author">{article.author}</div>
-          <div className="news-article__date">{article.date}</div>
+          <div className="news-article__date">
+            {formatDate(article.createdAt)}
+          </div>
 
           {/* <div className="news-article__comments">
             <svg

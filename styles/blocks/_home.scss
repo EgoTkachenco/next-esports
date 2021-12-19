@@ -127,7 +127,13 @@
           display: none;
         }
       }
+      &__label-wrapper {
+        @media (max-width: $sm) {
+          width: 100%;
+        }
+      }
       &__label-mob {
+        width: 100%;
         position: relative;
         display: none;
         @media (max-width: $sm) {

@@ -1,6 +1,6 @@
 .category-page {
   width: $content-width;
-  padding-bottom: 13.75rem;
+  padding-bottom: 3rem;
   @media (max-width: $sm) {
     width: 100%;
     padding: 0 1.4rem;
@@ -12,6 +12,8 @@
     left: 0;
     top: 0;
     overflow: hidden;
+    display: flex;
+    align-items: center;
     &::after {
       content: '';
       position: absolute;
@@ -90,6 +92,10 @@
       height: 21.875rem;
       width: 100%;
 
+      &-img {
+        width: 100%;
+      }
+
       @media (max-width: $sm) {
         height: 9.375rem;
       }
@@ -157,6 +163,22 @@
           height: 0.625rem;
         }
       }
+    }
+  }
+
+  &-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+
+    &__active-page {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    &__btn {
+      margin: 0 1.5rem;
     }
   }
 }

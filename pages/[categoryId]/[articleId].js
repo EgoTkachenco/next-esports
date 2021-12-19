@@ -1,10 +1,21 @@
+import { useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Icon from '../../components/common/Icon'
-import DATA from '../../public/articles.json'
+import { getArticle, getArticles } from '../../lib/api'
 import { useRouter } from 'next/router'
+import { formatDate } from '../../lib/date'
 function ArticlePage({ article }) {
   const router = useRouter()
+  useEffect(() => {
+    let images = document.querySelectorAll('#content img')
+    for (let img of images) {
+      console.log(img.src.slice(img.src.search('/uploads', -1)))
+      img.src =
+        process.env.NEXT_PUBLIC_SERVER_URL +
+        img.src.slice(img.src.search('/uploads', -1))
+    }
+  }, [])
   return (
     <>
       <Head>
@@ -92,24 +103,21 @@ function ArticlePage({ article }) {
             <h1 className="article__title">{article.title}</h1>
             <div className="article-info">
               <div className="article-info__date">
-                by {article.author} - {article.date}
+                by {article.author} - {formatDate(article.createdAt)}
               </div>
               <div className="article-info__reading-time">
-                Reading Time: 2min read
+                Reading Time: {article.readingTime} read
               </div>
             </div>
 
             <div className="article__illustration">
-              <Image
-                src={article.image}
-                width="840"
-                height="410"
-                layout="responsive"
+              <img
+                src={process.env.NEXT_PUBLIC_SERVER_URL + article.image.url}
                 alt={article.title}
               />
             </div>
 
-            <div className="article-content">
+            <div className="article-content" id="content">
               <SocialLinks />
               <div
                 dangerouslySetInnerHTML={{
@@ -182,15 +190,14 @@ const SocialLinks = () => {
 }
 
 export async function getStaticProps({ params: { categoryId, articleId } }) {
-  const article = DATA.articles.find(
-    (article) => article.categoryId === categoryId && article.id === articleId
-  )
-  return { props: { article } }
+  const article = await getArticle(articleId)
+  return { props: { article: article[0] } }
 }
 
 export async function getStaticPaths() {
-  const params = DATA.articles.map((article) => ({
-    params: { categoryId: article.categoryId, articleId: article.id },
+  const articles = await getArticles()
+  const params = articles.map((article) => ({
+    params: { categoryId: article.category.url, articleId: article.url },
   }))
   return {
     paths: params,

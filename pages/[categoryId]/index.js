@@ -1,9 +1,33 @@
-import Image from 'next/image'
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import BreadCrumbs from '../../components/common/BreadCrumbs'
-import DATA from '../../public/articles.json'
-function CategoryPage({ articles, category }) {
+import { getCategories, getCategory, getCategoryArticles } from '../../lib/api'
+import { formatDate } from '../../lib/date'
+
+function CategoryPage({ category }) {
+  const [page, setPage] = useState(1)
+  const limit = 10
+  let isPrevDisabled = page === 1
+  let maxPage = Math.ceil(category.articlesCount / limit)
+  let isNextDisabled = page >= maxPage
+  const [articles, setArticles] = useState([])
+  const changePage = (mode) => {
+    switch (mode) {
+      case 'prev':
+        setPage(page - 1)
+        break
+      case 'next':
+        setPage(page + 1)
+        break
+      default:
+    }
+  }
+  useEffect(() => {
+    getCategoryArticles(category.id, page, limit).then((res) => {
+      setArticles(res)
+    })
+  }, [category.id, page])
   if (!category) return <div className="content"></div>
   return (
     <>
@@ -14,28 +38,53 @@ function CategoryPage({ articles, category }) {
       <div className="content">
         <div className="category-page">
           <div className="category__back">
-            <Image
-              src={category.image}
-              layout="responsive"
-              width="1920"
-              height="340"
+            <img
+              style={{ width: '100%' }}
+              src={
+                process.env.NEXT_PUBLIC_SERVER_URL +
+                category.pageImage.formats.large.url
+              }
               alt="back"
             />
           </div>
           <div className="category__back-mob">
-            <Image
-              src={category.image}
-              layout="fill"
-              objectFit="fill"
+            <img
+              src={
+                process.env.NEXT_PUBLIC_SERVER_URL +
+                category.pageImage.formats.small.url
+              }
               alt="back"
             />
           </div>
           <BreadCrumbs />
           <h1 className="category-page__title">{category.title}</h1>
           <div className="category-page__articles">
-            {articles.map((article, i) => (
-              <Article key={i} article={article} category={category.id} />
+            {articles.map((article) => (
+              <Article
+                key={article.id}
+                article={article}
+                category={category.url}
+              />
             ))}
+          </div>
+          <div className="category-page-pagination">
+            <button
+              className="category-page-pagination__btn btn btn-primary"
+              onClick={() => changePage('prev')}
+              disabled={isPrevDisabled}
+            >
+              prev
+            </button>
+            <span className="category-page-pagination__active-page">
+              {page} / {maxPage}
+            </span>
+            <button
+              className="category-page-pagination__btn btn btn-primary"
+              onClick={() => changePage('next')}
+              disabled={isNextDisabled}
+            >
+              next
+            </button>
           </div>
         </div>
       </div>
@@ -47,20 +96,22 @@ const Article = ({ article, category }) => {
   return (
     <div className="category-page-article">
       <div className="category-page-article__preview">
-        <Image src={article.image} layout="fill" alt={article.title} />
+        <img
+          className="category-page-article__preview-img"
+          src={process.env.NEXT_PUBLIC_SERVER_URL + article.image.url}
+          layout="fill"
+          alt={article.title}
+        />
       </div>
       <div className="category-page-article-content">
         <div className="category-page-article__title">{article.title}</div>
-        <div
-          className="category-page-article__text"
-          dangerouslySetInnerHTML={{
-            __html: article.content.match(/<p>.*?<\/p>/g)[0],
-          }}
-        ></div>
+        <div className="category-page-article__text">{article.description}</div>
         <div className="category-page-article-bottom">
           <div className="category-page-article__author">{article.author}</div>
-          <div className="category-page-article__date">{article.date}</div>
-          <Link href={`/${category}/${article.id}`} passHref>
+          <div className="category-page-article__date">
+            {formatDate(article.createdAt)}
+          </div>
+          <Link href={`/${category}/${article.url}`} passHref>
             <div className="category-page-article__more">
               Read more
               <svg
@@ -79,18 +130,14 @@ const Article = ({ article, category }) => {
 }
 
 export async function getStaticProps({ params: { categoryId } }) {
-  const articles = DATA.articles.filter(
-    (article) => article.categoryId === categoryId
-  )
-  const category = DATA.categories.find(
-    (category) => category.id === categoryId
-  )
-  return { props: { articles, category } }
+  let category = await getCategory(categoryId)
+  return { props: { category: category[0] } }
 }
 
 export async function getStaticPaths() {
-  const params = DATA.categories.map((category) => ({
-    params: { categoryId: category.id },
+  let categories = await getCategories()
+  const params = categories.map((category) => ({
+    params: { categoryId: category.url },
   }))
   return {
     paths: params,

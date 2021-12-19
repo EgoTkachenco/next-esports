@@ -3,8 +3,9 @@ import Image from 'next/image'
 import BreadCrumbs from '../components/common/BreadCrumbs'
 import News from '../components/News'
 import Games from '../components/Games'
+import { getNews, getCategories } from '../lib/api'
 import DATA from '../public/articles'
-function Home({ news }) {
+function Home({ news, categories }) {
   return (
     <>
       <Head>
@@ -46,7 +47,7 @@ function Home({ news }) {
 
           <div className="home-page__categories">
             <News news={news} />
-            <Games />
+            <Games games={categories} />
           </div>
         </div>
       </div>
@@ -54,7 +55,8 @@ function Home({ news }) {
   )
 }
 Home.getInitialProps = async (ctx) => {
-  const news = DATA.articles.filter((article) => article.categoryId === 'news')
-  return { news }
+  const news = await getNews()
+  const categories = await getCategories()
+  return { news, categories }
 }
 export default Home

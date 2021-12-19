@@ -75,6 +75,11 @@ a {
   background: $c-primary;
   color: $c-white;
   border: 0.075rem solid $c-primary;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
 }
 .btn-outlined {
   border: 0.075rem solid $c-primary;
@@ -83,6 +88,9 @@ a {
     background: $c-primary;
     color: $c-white;
   }
+}
+img {
+  max-width: 100%;
 }
 
 @import './blocks/header';

@@ -11,6 +11,9 @@
   border: 0.065rem solid;
   border-left: 0.25rem solid;
   height: 6rem;
+  &__image {
+    width: 100%;
+  }
   &.grey {
     border-left-color: #596475;
     &:hover {
